@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./header.css";
+import "./Header.css";
 import { useRecoilState } from "recoil";
 import { formatListState } from "../../storage/atoms/main";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";

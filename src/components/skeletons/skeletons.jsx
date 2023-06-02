@@ -1,5 +1,5 @@
 import React from "react";
-import "./skeletons.css";
+import "./Skeletons.css";
 import { Skeleton } from "@mui/material";
 
 const Skeletons = () => {

@@ -1,7 +1,7 @@
 import React from "react";
-import AdsList from "../../components/adsList/adsList";
-import Header from "../../components/header/header";
 import "./mainPage.css";
+import Header from "../../components/Header/Header";
+import AdsList from "../../components/AdsList/AdsList";
 
 const MainPage = () => {
   return (

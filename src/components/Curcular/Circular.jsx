@@ -1,5 +1,5 @@
 import React from "react";
-import "./circular.css";
+import "./Circular.css";
 import { Box, CircularProgress } from "@mui/material";
 
 const Circular = () => {

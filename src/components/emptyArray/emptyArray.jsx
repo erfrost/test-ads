@@ -1,5 +1,5 @@
 import React from "react";
-import "./emptyArray.css";
+import "./EmptyArray.css";
 
 const EmptyArray = () => {
   return (

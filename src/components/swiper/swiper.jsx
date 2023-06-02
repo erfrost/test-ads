@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./swiper.css";
+import "./Swiper.css";
 import image1 from "../../assets/i1.png";
 import image2 from "../../assets/i2.jpg";
 import image3 from "../../assets/i3.jpg";
@@ -34,7 +34,7 @@ const Swiper = ({ format, item }) => {
     <>
       {format ? (
         <div>
-          {format && localStorage.getItem("seen" + item.id) ? (
+          {format && localStorage.getItem("seen" + item.id) === "true" ? (
             <div
               className={
                 format === "horizontal" ? "seen seen-h" : "seen seen-v"

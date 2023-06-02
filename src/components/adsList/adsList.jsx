@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import "./adsList.css";
+import "./AdsList.css";
 import { getAds } from "../../api/getAds";
-import { Box, Button, CircularProgress } from "@mui/material";
-import ItemsRender from "../itemsRender/itemsRender";
-import Skeletons from "../skeletons/skeletons";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
   dataState,
   formatListState,
   locationHistoryState,
 } from "../../storage/atoms/main";
-import Circular from "../curcularProgress/circular";
-import ErrorBtn from "../errorBtn/errorBtn";
-import EmptyArray from "../emptyArray/emptyArray";
+import Skeletons from "../Skeletons/Skeletons";
+import ErrorBtn from "../ErrorBtn/ErrorBtn";
+import EmptyArray from "../EmptyArray/EmptyArray";
+import ItemsRender from "../itemsRender/ItemsRender";
+import Circular from "../Curcular/Circular";
+import { Button } from "@mui/material";
 
 const AdsList = () => {
   const format = useRecoilValue(formatListState);
@@ -28,11 +28,11 @@ const AdsList = () => {
     else setLoading(true);
     setReqError(false);
     try {
-      const responseData = await getAds(pageCount);
+      const { data: responseData } = await getAds(pageCount);
       setData((prevState) =>
         prevState && !history.length
-          ? [...prevState, ...responseData.data.items]
-          : responseData.data.items
+          ? [...prevState, ...responseData.items]
+          : responseData.items
       );
     } catch (error) {
       setReqError(true);
@@ -47,7 +47,7 @@ const AdsList = () => {
   }, [pageCount]);
 
   return (
-    <div className={"adsList-main"}>
+    <div className="adsList-main">
       <div
         className={`adsList ${
           format === "horizontal" ? "adsList-h" : "adsList-v"
@@ -63,6 +63,7 @@ const AdsList = () => {
           <ItemsRender data={data} pageCount={pageCount} />
         )}
       </div>
+
       {data && !loading && !reqError && data.length !== 0 && pageCount < 5 ? (
         additionalLoading ? (
           <Circular />

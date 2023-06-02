@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
-import "./itemsRender.css";
-import { priceValidator } from "../../utils/priceValidator";
-import { dateValidator } from "../../utils/dateValidator";
+import "./ItemsRender.css";
 import { useRecoilValue } from "recoil";
 import { formatListState } from "../../storage/atoms/main";
 import { Link } from "react-router-dom";
-import Swiper from "../swiper/swiper";
+import Swiper from "../Swiper/Swiper";
+import { priceValidator } from "../../utils/priceValidator";
+import { dateValidator } from "../../utils/dateValidator";
 
 const ItemsRender = ({ data }) => {
+  console.log(data);
   const format = useRecoilValue(formatListState);
 
   const handleActiveIcon = (id) => {
@@ -19,7 +20,7 @@ const ItemsRender = ({ data }) => {
     heartIcons.forEach((heartIcon) => {
       const datasetId = heartIcon.dataset.id;
       if (datasetId === id) {
-        if (localStorage.getItem("favorite" + id)) {
+        if (localStorage.getItem("favorite" + id) === "true") {
           heartIcon.classList.toggle("heartIcon-active");
         } else {
           heartIcon.classList.toggle("");

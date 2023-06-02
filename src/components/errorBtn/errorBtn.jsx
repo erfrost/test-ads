@@ -1,5 +1,5 @@
 import React from "react";
-import "./errorBtn.css";
+import "./ErrorBtn.css";
 import { Button } from "@mui/material";
 
 const ErrorBtn = ({ getItems, pageCount, size }) => {
