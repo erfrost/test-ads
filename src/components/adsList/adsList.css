@@ -1,0 +1,73 @@
+.adsList-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.adsList {
+    padding: 25px 100px 25px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.itemList-btn {
+    background-color: #FFFFFF !important;
+    color: #00A0AB !important;
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 45px !important;
+    font-size: 14px !important;
+    font-family: 'VK Sans Display' !important;
+    text-transform: none !important;
+    box-shadow: none !important;
+}
+.itemList-btn:hover {
+    background-color: #F8F8F8 !important;
+}
+
+@media screen and (max-width: 1210px) {
+    .adsList-h {
+        padding: 25px 50px 25px 50px;
+    }
+}
+@media screen and (max-width: 1110px) {
+    .adsList-h {
+        padding: 25px 25px 25px 25px;
+        gap: 25px;
+    }
+}
+@media screen and (max-width: 1035px) {
+    .adsList-h {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 713px) {
+    .adsList-v {
+        padding: 25px 50px 25px 50px;
+    }
+}
+@media screen and (max-width: 615px) {
+    .adsList-v {
+        padding: 25px 25px 25px 25px;
+    }
+}
+@media screen and (max-width: 563px) {
+    .adsList-v {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width: 470px) {
+    .adsList-h {
+        padding: 5px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .adsList-h {
+        padding: 2px;
+    }
+}

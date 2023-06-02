@@ -1,0 +1,74 @@
+.header-main {
+    height: 61px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-buttons {
+    width: 73px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-active {
+    stroke: #00A0AB !important;
+}
+.scroll-btn {
+    width: 106px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #e2e2e2;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    top: 16px;
+    right: 50%;
+    transform: translate(50%,0);
+    z-index: 2;
+    opacity: 1;
+    animation: hide 0.25s forwards;
+}
+@keyframes hide {
+    0% {opacity: 1;}
+    100% {opacity: 0; display: none;}
+}
+.scroll-btn-show {
+    opacity: 0;
+    animation: show 0.25s forwards;
+}
+@keyframes show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.scroll-btn-padding {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 20px 5px 10px;
+}
+.scroll-btn-text {
+    color: #8F8F8F;
+    font-size: 14px;
+}
+
+#horizontal, #vertical {
+    stroke: #C7C7C7;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#vertical:hover {
+    stroke: #A4A4A4;
+}
+#horizontal:hover {
+    stroke: #A4A4A4;
+}
+

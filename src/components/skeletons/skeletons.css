@@ -1,0 +1,56 @@
+.skeleton-main {
+    display: flex;
+    flex-direction: column;
+}
+.skeleton-1 {
+    width: 100%;
+    border-radius: 15px 15px 0 0 !important;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.skeleton-2 {
+    border-radius: 0 0 15px 15px !important;
+    background-color: #F8F8F8 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: none !important;
+    -webkit-animation: none !important;
+}
+.skeleton-slider {
+    visibility: visible !important;
+    animation: none !important;
+    -webkit-animation: none !important;
+    background-color: #F8F8F8 !important;
+    margin-bottom: 10px;
+}
+.skeleton-padding {
+    width: calc(100% - 20px);
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+.skeleton-description-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    visibility: visible;
+}
+.skeleton-description-2 {
+    visibility: visible;
+}
+.skeleton-description-3 {
+    visibility: visible;
+}
+.skeleton-btn {
+    border-radius: 45px !important;
+    width: 132px;
+    height: 39px !important;
+}

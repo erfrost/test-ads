@@ -1,0 +1,82 @@
+.seen {
+    width: 94px;
+    height: 24px;
+    position: absolute;
+    background-color: #FFFFFF;
+    color: #00A0AB;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px 0 8px;
+    font-size: 12px;
+}
+.seen-v {
+    margin-top: 10px;
+    margin-left: 55px;
+}
+.seen-h {
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 38px;
+}
+.swiper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    top: -23px;
+}
+.card-swiper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    top: -30px;
+    left: 35%;
+}
+.circle {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.circle:hover {
+    background-color: #A4A4A4;
+}
+.circle-active {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #00A0AB;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
+    .seen-h {
+        margin-left: 37px;
+        height: 15px;
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .seen-h {
+        width: auto;
+        margin-left: 28px;
+        font-size: 11px;
+        padding: 0 7px 0 7px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .seen-h {
+        margin-left: 21px;
+        font-size: 9px;
+    }
+}
